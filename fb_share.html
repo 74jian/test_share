@@ -2,10 +2,31 @@
     <head>
     </head>
 <body>
+    <p>插件形式</p>
     <div class="fb-share-button" data-href="https://74jian.github.io/test_share/fb_share.html" data-layout="button_count" data-size="small"></div>
+    <p>调用形式</p>
+    <button onclick="openshare()">点击分享</button>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v4.0&appId=2217738841687428&autoLogAppEvents=1"></script>
-
+    <script>
+        function openshare() {
+            // 初始化    
+            FB.init({
+                appId: '2217738841687428',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: "v2.12"
+            });
+            FB.ui(
+                {
+                method: "share",
+                mobile_iframe: true,
+                href: "https://74jian.github.io/test_share/fb_share.html"
+                },
+                function(response) {}
+            );
+        }
+    </script>
 </body>
  
 </html>
