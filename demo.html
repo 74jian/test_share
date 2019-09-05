@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+        body{top: 0 !important;}
+         body .goog-te-banner-frame{
+             position: absolute;
+             left: -100%;
+             display: none;
+         }
+         body #goog-gt-tt{
+             opacity: 0;
+         }
+        </style>
+    </head>
+<body>
+    <div class="grid@tl+"><div class="grid@tl+__cell col-8-of-12@tl+"><div class="article-text c-gray-1"><p>              昨晚刚刚在海外发布的 Sony 黑卡新机 <a href="https://cn.engadget.com/2019/07/25/sony-rx100-vii/">RX100 VII</a>，今天火速公开了国行版本的发售资讯。这次索尼给出的单机行货价格是 8,699 元，现在已可在<a href="https://www.sonystyle.com.cn/products/cyber-shot/dsc_rx100m7/dsc_rx100m7_b_kit1.html">官网</a>下单预购，八月下旬会正式出货。除此之外，为了进一步凸显 RX100 VII 针对 vlog 拍摄进行的加强，Sony 也同步推出了除相机外还包含 VCT-SGR1 手柄（可控制视频拍摄和变焦，有麦克风快接板）及两块电池的手柄套装。它的价格是 9,299 元，目前也已经可以预定。
+    </p></div></div></div>
+<!--把button放在右下角，这个是可以随意修改的，你可以改成一个链接一个图片之类的-->
+<div id="google_translate_element" style="position: fixed;;top:10px;right:10px;z-index:2000;opacity:0;visibility: hidden;"></div>
+<button onclick="ctranslate('英语')">点我翻译成英语</button>
+<button onclick="ctranslate('日语')">点我翻译成日语</button>
+<button onclick="ctranslate('中文（简体）')">点我翻译成简体中文</button>
+<script>
+function ctranslate(type){
+    var btns = document.querySelectorAll('.goog-te-menu-frame.skiptranslate')[0].contentDocument.querySelectorAll('.goog-te-menu2-item')
+    for (let i = 0; i < btns.length; i++) {
+        if (btns[i].querySelector('.text').innerHTML==type) {
+            btns[i].click()
+            return
+        }
+    }
+}
+function googleTranslateElementInit() {
+ 
+	new google.translate.TranslateElement(
+		{
+            pageLanguage: 'zh-CN',
+            //这个是你需要翻译的语言，比如你只需要翻译成越南和英语，这里就只写en,vi
+			includedLanguages: 'en,zh-CN,hr,cs,da,nl,fr,de,el,iw,hu,ga,it,ja,ko,pt,ro,ru,sr,es,th,vi',
+            //选择语言的样式，这个是面板，还有下拉框的样式，具体的记不到了，找不到api~~
+			layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+		}, 
+		'google_translate_element'//触发按钮的id
+	);
+ 
+}
+</script>
+<script src="https://translate.google.cn/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+ 
+</html>
